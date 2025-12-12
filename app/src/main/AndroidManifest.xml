@@ -12,8 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Studentsdynamiclist">
         <activity
+            android:name=".AddNewStudentActivity"
+            android:exported="true" />
+        <activity
             android:name=".StudentRecycleViewActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +26,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
         </activity>
     </application>
 
