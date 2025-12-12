@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.students_dynamic_list.addapter.StudentAdapter
 import com.example.students_dynamic_list.databinding.ActivityStudentRecycleViewBinding
 import com.example.students_dynamic_list.model.Model
 

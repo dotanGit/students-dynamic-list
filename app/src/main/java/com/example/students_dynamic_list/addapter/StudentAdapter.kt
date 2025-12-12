@@ -1,8 +1,9 @@
-package com.example.students_dynamic_list
+package com.example.students_dynamic_list.addapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.students_dynamic_list.addapter.StudentRowViewHolder
 import com.example.students_dynamic_list.databinding.StudentRowLayoutBinding
 import com.example.students_dynamic_list.model.Student
 

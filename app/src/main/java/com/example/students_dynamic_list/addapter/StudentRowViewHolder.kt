@@ -1,12 +1,12 @@
-package com.example.students_dynamic_list
+package com.example.students_dynamic_list.addapter
 
 import android.content.Intent
-import android.widget.CheckBox
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.example.students_dynamic_list.R
+import com.example.students_dynamic_list.StudentDetailActivity
 import com.example.students_dynamic_list.databinding.StudentRowLayoutBinding
 import com.example.students_dynamic_list.model.Student
-import kotlin.jvm.java
 
 class StudentRowViewHolder(val binding: StudentRowLayoutBinding): RecyclerView.ViewHolder(binding.root) {
     private var currentStudent: Student? = null
@@ -24,8 +24,8 @@ class StudentRowViewHolder(val binding: StudentRowLayoutBinding): RecyclerView.V
                 }
                 context.startActivity(intent)
             }
-
         }
+
         binding.checkBox.setOnClickListener {
             currentStudent?.isChecked = binding.checkBox.isChecked
         }
@@ -37,6 +37,5 @@ class StudentRowViewHolder(val binding: StudentRowLayoutBinding): RecyclerView.V
         binding.studentRowLayoutName.text = "Name: ${student.name}"
         binding.studentRowLayoutId.text = "ID: ${student.id}"
         binding.checkBox.isChecked = student.isChecked
-
     }
 }
