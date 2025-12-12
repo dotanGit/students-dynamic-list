@@ -20,10 +20,11 @@ class AddNewStudentActivity : AppCompatActivity() {
         binding = ActivityAddNewStudentBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        binding?.activityAddNewStudentSubmitBtn?.setOnClickListener {
+        binding?.activityAddNewStudentCancelBtn?.setOnClickListener {
             setResult(RESULT_CANCELED)
             finish()
         }
+
         binding?.activityAddNewStudentSubmitBtn?.setOnClickListener {
             val name = binding?.activityAddNewStudentName?.text.toString()
             val id = binding?.activityAddNewStudentId?.text.toString()

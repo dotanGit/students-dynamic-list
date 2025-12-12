@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Studentsdynamiclist">
         <activity
+            android:name=".EditStudentActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditStudentDetails"
             android:exported="false" />
         <activity

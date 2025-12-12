@@ -21,6 +21,7 @@ class StudentRowViewHolder(val binding: StudentRowLayoutBinding): RecyclerView.V
                     putExtra("STUDENT_PHONE", student.phone)
                     putExtra("STUDENT_ADDRESS", student.address)
                     putExtra("STUDENT_IS_CHECKED", student.isChecked)
+                    putExtra("STUDENT_POSITION", adapterPosition)
                 }
                 context.startActivity(intent)
             }
