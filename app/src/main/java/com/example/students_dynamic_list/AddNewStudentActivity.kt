@@ -20,16 +20,15 @@ class AddNewStudentActivity : AppCompatActivity() {
         binding = ActivityAddNewStudentBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        binding?.activityAddNewStudentCancelBtn?.setOnClickListener {
+        binding?.activityAddNewStudentSubmitBtn?.setOnClickListener {
             setResult(RESULT_CANCELED)
             finish()
         }
-
         binding?.activityAddNewStudentSubmitBtn?.setOnClickListener {
-            val name = binding?.activityAddNewStudentEditName?.text.toString()
-            val id = binding?.activityAddNewStudentEditId?.text.toString()
-            val phone = binding?.activityAddNewStudentEditPhone?.text.toString()
-            val address = binding?.activityAddNewStudentEditAddress?.text.toString()
+            val name = binding?.activityAddNewStudentName?.text.toString()
+            val id = binding?.activityAddNewStudentId?.text.toString()
+            val phone = binding?.activityAddNewStudentPhone?.text.toString()
+            val address = binding?.activityAddNewStudentAddress?.text.toString()
             val isChecked = binding?.activityAddNewStudentIsCheckedBox?.isChecked
 
             val newStudent = Student(name, id, phone, address, isChecked ?: false)
