@@ -41,6 +41,13 @@ class EditStudentActivity : AppCompatActivity() {
             finish()
         }
 
+        binding?.activityEditStudentDeleteBtn?.setOnClickListener {
+            val resultIntent = Intent()
+            resultIntent.putExtra("STUDENT_POSITION", studentPosition)
+            setResult(Activity.RESULT_FIRST_USER, resultIntent)
+            finish()
+        }
+
         binding?.activityEditStudentSubmitBtn?.setOnClickListener {
             // Read the (possibly updated) text from all the EditText fields
             val updatedName = binding?.activityEditStudentName?.text.toString()

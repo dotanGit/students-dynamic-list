@@ -38,6 +38,18 @@ class StudentDetailActivity : AppCompatActivity() {
             binding.activityStudentDetailsAddress.text = newAddress
             binding.activityAddNewStudentIsCheckedBox.isChecked = newIsChecked
         }
+        else if (result.resultCode == Activity.RESULT_FIRST_USER) {
+            val data: Intent? = result.data
+            val position = data?.getIntExtra("STUDENT_POSITION", -1) ?: -1
+
+            // Remove the student from the Model
+            if (position != -1) {
+                Model.shared.students.removeAt(position)
+            }
+
+            // Finish the detail activity to go back to the main list
+            finish()
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -135,22 +135,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancel"
-        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_submit_btn"
-        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_submit_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_delete_btn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_edit_student_is_checked_box"
+        app:layout_constraintVertical_bias="0.519" />
 
     <Button
         android:id="@+id/activity_edit_student_submit_btn"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="8dp"
         android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_delete_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_cancel_btn"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.988" />
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_delete_btn" />
+
+    <Button
+        android:id="@+id/activity_edit_student_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        app:layout_constraintBaseline_toBaselineOf="@+id/activity_edit_student_cancel_btn"
+        app:layout_constraintEnd_toStartOf="@+id/activity_edit_student_submit_btn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/activity_edit_student_cancel_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
