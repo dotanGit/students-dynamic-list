@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Studentsdynamiclist">
         <activity
+            android:name=".StudentDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddNewStudentActivity"
             android:exported="true" />
         <activity
@@ -25,9 +28,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
